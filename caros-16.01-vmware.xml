@@ -4,7 +4,6 @@
 
 		<remote baseurl="git://git.yoctoproject.org/" name="yocto"   />
 		<remote baseurl="git://github.com/carosio/" name="carosio"   />
-		<remote baseurl="git://github.com/thz/" name="thz"   />
 		<remote baseurl="git://github.com/openembedded/" name="openembedded"/>
 
 		<baselayer
@@ -44,7 +43,7 @@ DL_DIR = "/REDO/download"
 	</local_conf>
 
 	<buildstage id="010-ubuntu">
-		<action>FROM ubuntu:14.04-cached</action>
+		<action>FROM ubuntu:14.04</action>
 		<action>RUN apt-get update</action>
 		<action>RUN apt-get install -y subversion gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath libsdl1.2-dev vim sudo curl webfs</action>
 		<reposync />
